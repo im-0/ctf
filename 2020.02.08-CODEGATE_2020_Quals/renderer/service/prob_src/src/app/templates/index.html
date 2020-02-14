@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block userstyle %}
+<link rel="stylesheet" href="/static/css/renderer.css" />
+{% endblock %}
+{% block body %}
+<div class="container">
+  <h3 class="text-center">Codegate '20 Proxy Service</h3> 
+  <br />
+  <form method="POST">
+    <div class="form-row">
+      <div class="col-xs-10">
+        <input type="text" class="form-control" name="url" placeholder="http://127.0.0.1/renderer/whatismyip" />
+      </div>
+      <div class="col-xs-2">
+        <button type="submit" class="btn btn-primary">Go!</button>
+      </div>
+    </div>
+  </form>
+  {% if data %}
+  <br />
+  <br />
+  <br />
+  <h3 class="text-center">Our proxy says..</h3>
+  <div class="proxy-body">
+    {{ data }}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

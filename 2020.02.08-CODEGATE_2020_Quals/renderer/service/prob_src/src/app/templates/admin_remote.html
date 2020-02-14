@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block usertyle %}
+<link rel="stylesheet" href="/static/css/renderer.css" />
+{% endblock %}
+{% block body %}
+<div class="container">
+  <h3 class="text-center">Codegate '20 Proxy Admin Page</h3>
+  <br />
+  <img src="/static/img/admin_is_watching_you.jpg" />
+  {% if ticket %}
+  <p class="text-center">
+    Your access log is written with ticket no {{ ticket }}
+  </p>
+  {% endif %}
+</div>
+{% endblock %}

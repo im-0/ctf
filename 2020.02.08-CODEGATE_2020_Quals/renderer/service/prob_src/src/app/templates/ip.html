@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block userstyle %}
+<link rel="stylesheet" href="/static/css/renderer.css" />
+{% endblock %}
+{% block body %}
+<div class="container">
+  <h3 class="text-center">Codegate '20 Proxy Helper</h3> 
+  <br />
+  <h3 class="text-center">Our proxy says your ip is ...</h3>
+  <h4 class="text-center">
+    {{ ip }}
+    {% if real_ip != ip %}
+    <br />
+    in fact, from {{ real_ip }}
+    {% endif %}
+  </h4>
+</div>
+{% endblock %}

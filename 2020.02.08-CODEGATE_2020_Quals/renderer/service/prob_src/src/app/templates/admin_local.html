@@ -1,0 +1,12 @@
+{% block body %}
+<div class="container">
+  <h3 class="text-center">Codegate '20 Proxy Admin Page (REAL)</h3>
+  <br />
+  <img src="/static/img/admin.jpg" />
+  {% if ticket %}
+  <p class="text-center">
+    Your super-private log is written with ticket no {{ ticket }}
+  </p>
+  {% endif %}
+</div>
+{% endblock %}
